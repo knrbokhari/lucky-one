@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img/main/slim-3i-500x500.jpg",
+    "name": "Lenovo IdeaPad Slim 3i",
+    "price": 74320,
+    "brand": "Lenovo",
+    "Processor": "ntel Core i5-1115G4"
+  },
+  {
+    "id": 2,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/macbook-myd92-.jpg",
+    "name": "Apple MacBook Pro 13",
+    "price": 154000,
+    "brand": "Apple",
+    "Processor": "Apple M1 chip"
+  },
+  {
+    "id": 3,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/vivobook-pro-16x-oled-01-.jpg",
+    "name": "Asus Vivobook Pro 16X",
+    "price": 154000,
+    "brand": "Asus",
+    "Processor": "AMD Ryzen 7 5800H"
+  },
+  {
+    "id": 4,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/yoga-slim-7-carbon-01-.jpg",
+    "name": "Lenovo Yoga Slim 7",
+    "price": 157330,
+    "brand": "Lenovo",
+    "Processor": "AMD Ryzen 7 5800U"
+  },
+  {
+    "id": 5,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/prestige-14-a11scx-gray-.jpg",
+    "name": "MSI Prestige 14",
+    "price": 163899,
+    "brand": "MSI",
+    "Processor": "Intel Core i7-1185G7"
+  },
+  {
+    "id": 6,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/surface-book-3-101-.jpg",
+    "name": "Microsoft Surface Book 3 ",
+    "price": 160580,
+    "brand": "Microsoft",
+    "Processor": "Intel Core i5-1035G7"
+  },
+  {
+    "id": 7,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/envy-x360-convertible-15t-ed100-01-.jpg",
+    "name": "HP ENVY X360",
+    "price": 159500,
+    "brand": "HP",
+    "Processor": "Intel Core i7-1165G7"
+  },
+  {
+    "id": 8,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/nitro-5-an515-01-.jpg",
+    "name": "Acer Nitro 5 ",
+    "price": 165000,
+    "brand": "Acer",
+    "Processor": "AMD Ryzen 7 5800H"
+  },
+  {
+    "id": 9,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/galaxy-book-pro-360-02-.jpg",
+    "name": "Samsung Galaxy Book Pro",
+    "price": 170500,
+    "brand": "Samsung",
+    "Processor": "Intel Core i7-1165G7 Processor"
+  },
+  {
+    "id": 10,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/surface-pro-8-01-.jpg",
+    "name": "Microsoft Surface Pro 8",
+    "price": 183300,
+    "brand": "Microsoft",
+    "Processor": "Intel Core i7-1185G7 "
+  },
+  {
+    "id": 11,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/blade-15-base-model-core-i7-10th-gen-2-.jpg",
+    "name": "Razer Blade 15 Base",
+    "price": 192930,
+    "brand": "Razer",
+    "Processor": "Intel Core i7-10750H Processor"
+  },
+  {
+    "id": 12,
+    "img": "https://raw.githubusercontent.com/knrbokhari/img-api/main/macbook-pro-16-inch-002-.jpg",
+    "name": "Apple MacBook Pro",
+    "price": 292950,
+    "brand": "Apple",
+    "Processor": "Apple M1 Pro Chip"
+  }
+]
