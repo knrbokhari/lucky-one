@@ -14,7 +14,15 @@
 .cart-container{
     background-color: wheat;
 }
-
+.cart{
+    position: sticky;
+    top: 0;
+    padding: 10px;
+}
+.cart h1{
+    text-align: center;
+    font-weight: 500;
+}
 @media screen and (min-width: 576px) {
     .item-container{
         grid-template-columns: repeat(3, 300px);

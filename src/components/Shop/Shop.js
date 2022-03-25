@@ -17,15 +17,10 @@ const Shop = () => {
 
   const addToCart = (item) => {
     // console.log(id);
-    let saveCart = [];
-    for (const item of items) {
-      //   const addCart = item.find(());
-      //   if (id === item.id) {
-      //     newCart = [...newCart, item];
-      //     setCart(newCart);
-      //   }
+    if (cart.length < 4) {
+      const newCart = [...cart, item];
+      setCart(newCart);
     }
-    // console.log(cart);
   };
 
   return (
@@ -36,7 +31,12 @@ const Shop = () => {
         ))}
       </div>
       <div className="cart-container">
-        <Cart></Cart>
+        <div className="cart">
+          <h1>Selected Items</h1>
+          {cart.map((cartItem) => (
+            <Cart cartItem={cartItem} key={cartItem.id}></Cart>
+          ))}
+        </div>
       </div>
     </div>
   );

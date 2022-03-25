@@ -3,8 +3,9 @@ import "./Cart.css";
 
 const Cart = (props) => {
   return (
-    <div className="cart">
-      <h1>Selected Items</h1>
+    <div>
+      <p>{props.cartItem.name}</p>
+      {/* <a href="" onClick={kjkl}>abc</a> */}
     </div>
   );
 };
