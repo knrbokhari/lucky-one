@@ -1,0 +1,13 @@
+.QuestionAndAns{
+    max-width: 1440px;
+    margin: 30px auto;
+}
+.QuestionAndAns h3{
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 10px 10px;
+}
+.QuestionAndAns p{
+    font-size: 17px;
+    margin: 0 25px;
+}

@@ -86,8 +86,10 @@ const Shop = () => {
             CLEAR
           </button>
           <div>
-            <h3>You can buy this:</h3>
-            <p className="item-name">{oneItem[0]?.name}</p>
+            <h3 className="result">
+              You can buy this: <p className="item-name">{oneItem[0]?.name}</p>
+            </h3>
+            <img src={oneItem[0]?.img} alt="" className="result-img" />
           </div>
         </div>
       </div>

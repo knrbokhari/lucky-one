@@ -49,8 +49,19 @@
     font-size: 20px;
     font-weight: 500;
 }
+.result{
+    display: flex;
+    align-items: center;
+}
 .item-name{
     margin: 0;
+    font-size: 17px;
+    margin-left:  10px;
+    font-weight: 400;
+}
+.result-img{
+    width: 100%;
+    border-radius: 15px;
 }
 @media screen and (min-width: 576px) {
     .shop-container{
