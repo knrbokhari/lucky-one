@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
+import ChooseOne from "../ChooseOne/ChooseOne";
 import Item from "../Item/Item";
 
 import "./Shop.css";
@@ -7,6 +8,7 @@ import "./Shop.css";
 const Shop = () => {
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState([]);
+  const [oneItem, setOneItem] = useState([]);
 
   useEffect(() => {
     fetch("https://knrbokhari.github.io/fakeData1/products.JSON")
@@ -42,7 +44,15 @@ const Shop = () => {
     }
   };
 
-  // Math.round(Math.random()*4);
+  const chooseOneItem = () => {
+    const cartItemLength = cart.length - 1;
+    let chooseItem = [];
+    const randomNumber = Math.round(Math.random() * cartItemLength);
+    chooseItem.push(cart[randomNumber]);
+    setOneItem(chooseItem);
+  };
+
+  // console.log(oneItem);
 
   return (
     <div className="shop-container">
@@ -63,9 +73,14 @@ const Shop = () => {
               ></Cart>
             ))}
           </div>
-          <button>CHOOSE 1 FOR ME</button>
+          <button onClick={chooseOneItem} className="chooseOneItem">
+            CHOOSE 1 FOR ME
+          </button>
           <br></br>
           <button>CLEAR</button>
+        </div>
+        <div>
+          <ChooseOne oneItem={oneItem} key={oneItem.id}></ChooseOne>
         </div>
       </div>
     </div>
