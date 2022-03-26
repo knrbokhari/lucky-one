@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBackspace } from "@fortawesome/free-solid-svg-icons";
 
 const Cart = ({ cartItem, removeItemFromCart }) => {
-  // console.log(props);
   return (
     <div className="cart-item">
       <img src={cartItem.img} alt="" />

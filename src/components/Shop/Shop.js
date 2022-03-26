@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
 import Item from "../Item/Item";
-
 import "./Shop.css";
 
 const Shop = () => {
@@ -9,12 +8,14 @@ const Shop = () => {
   const [cart, setCart] = useState([]);
   const [oneItem, setOneItem] = useState([]);
 
+  // api
   useEffect(() => {
     fetch("https://knrbokhari.github.io/fakeData1/products.JSON")
       .then((res) => res.json())
       .then((data) => setItems(data));
   }, []);
 
+  // add item from
   const addToCart = (item) => {
     if (cart.length < 4) {
       if (cart.length === 0) {
@@ -26,7 +27,7 @@ const Shop = () => {
           const newCart = [...cart, item];
           setCart(newCart);
         } else if (exists) {
-          alert("you add this item");
+          alert("You can't add one item twice");
         }
       }
     } else {
@@ -34,6 +35,7 @@ const Shop = () => {
     }
   };
 
+  // remove item from cart
   const removeItemFromCart = (cartItem) => {
     for (const item of cart) {
       if (item.id === cartItem.id) {
@@ -45,6 +47,7 @@ const Shop = () => {
     }
   };
 
+  // choose one item from cart
   const chooseOneItem = () => {
     const cartItemLength = cart.length - 1;
     let chooseItem = [];
@@ -53,19 +56,22 @@ const Shop = () => {
     setOneItem(chooseItem);
   };
 
+  // clear all item from cart
   const clearAll = () => {
-    console.log("clearAll");
     let oldArray = [];
     setCart(oldArray);
     setOneItem(oldArray);
   };
+
   return (
     <div className="shop-container">
+      {/* all items */}
       <div className="item-container">
         {items.map((item) => (
           <Item items={item} key={item.id} addToCart={addToCart}></Item>
         ))}
       </div>
+      {/* cart */}
       <div className="cart-container">
         <div className="cart">
           <h1>Selected Items</h1>
@@ -85,7 +91,8 @@ const Shop = () => {
           <button onClick={clearAll} className="clear-btn">
             CLEAR
           </button>
-          <div>
+          {/* result from cart */}
+          <div className="result-container">
             <h3 className="result">
               You can buy this: <p className="item-name">{oneItem[0]?.name}</p>
             </h3>
