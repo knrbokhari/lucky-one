@@ -1,1 +1,14 @@
-
+.cart-irem{
+    width: 320px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+.cart-irem img{
+    width: 30px;
+    height: 30px;
+}
+.cart-irem p{
+    font-size: 16px;
+}
