@@ -6,6 +6,9 @@
     margin: 0 auto;
     position: relative;
     margin-top: 20px;
+    padding: 8px;
+    background-color: white;
+    border-radius: 10px;
 }
 .cart-item img{
     width: 35px;
@@ -18,7 +21,7 @@
 }
 .cart-item a{
     position: absolute;
-    right: 0;
+    right: 15px;
     font-size: 20px;
-    /* border-radius: 10px; */
+    cursor: pointer;
 }

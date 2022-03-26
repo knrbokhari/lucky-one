@@ -29,6 +29,8 @@ const Shop = () => {
           alert("you add this item");
         }
       }
+    } else {
+      alert("You can't add more then 4 items");
     }
   };
 
@@ -76,14 +78,16 @@ const Shop = () => {
               ></Cart>
             ))}
           </div>
-          <button onClick={chooseOneItem} className="chooseOneItem">
+          <button onClick={chooseOneItem} className="chooseOneItem-btn">
             CHOOSE 1 FOR ME
           </button>
           <br></br>
-          <button onClick={clearAll}>CLEAR</button>
+          <button onClick={clearAll} className="clear-btn">
+            CLEAR
+          </button>
           <div>
             <h3>You can buy this:</h3>
-            {oneItem[0]?.name}
+            <p className="item-name">{oneItem[0]?.name}</p>
           </div>
         </div>
       </div>

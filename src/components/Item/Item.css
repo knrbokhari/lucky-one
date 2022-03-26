@@ -28,7 +28,7 @@
 }
 .item button{
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     font-size: 16px;
     font-weight: bold;
     color: white;
@@ -38,7 +38,11 @@
     position: absolute;
     bottom: 0;
     border-radius: 0 0 15px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-html{
-    background-color: #dfdede;
+.item button p{
+    margin: 0;
+    margin-right: 10px;
 }

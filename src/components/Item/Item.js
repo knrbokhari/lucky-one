@@ -15,7 +15,7 @@ const Item = ({ items, addToCart }) => {
         <h3>Price: {price} </h3>
       </div>
       <button onClick={() => addToCart(items)}>
-        ADD TO CART <FontAwesomeIcon icon={faCartArrowDown} />
+        <p>ADD TO CART</p> <FontAwesomeIcon icon={faCartArrowDown} />
       </button>
     </div>
   );
