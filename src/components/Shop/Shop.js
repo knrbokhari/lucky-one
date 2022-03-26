@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import Cart from "../Cart/Cart";
-import ChooseOne from "../ChooseOne/ChooseOne";
 import Item from "../Item/Item";
 
 import "./Shop.css";
@@ -26,7 +25,7 @@ const Shop = () => {
         if (!exists) {
           const newCart = [...cart, item];
           setCart(newCart);
-        } else {
+        } else if (exists) {
           alert("you add this item");
         }
       }
@@ -52,8 +51,12 @@ const Shop = () => {
     setOneItem(chooseItem);
   };
 
-  // console.log(oneItem);
-
+  const clearAll = () => {
+    console.log("clearAll");
+    let oldArray = [];
+    setCart(oldArray);
+    setOneItem(oldArray);
+  };
   return (
     <div className="shop-container">
       <div className="item-container">
@@ -77,10 +80,11 @@ const Shop = () => {
             CHOOSE 1 FOR ME
           </button>
           <br></br>
-          <button>CLEAR</button>
-        </div>
-        <div>
-          <ChooseOne oneItem={oneItem} key={oneItem.id}></ChooseOne>
+          <button onClick={clearAll}>CLEAR</button>
+          <div>
+            <h3>You can buy this:</h3>
+            {oneItem[0]?.name}
+          </div>
         </div>
       </div>
     </div>
