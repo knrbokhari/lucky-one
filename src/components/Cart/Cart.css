@@ -1,14 +1,24 @@
-.cart-irem{
+.cart-item{
     width: 320px;
     height: 30px;
     display: flex;
     align-items: center;
     margin: 0 auto;
+    position: relative;
+    margin-top: 20px;
 }
-.cart-irem img{
-    width: 30px;
-    height: 30px;
+.cart-item img{
+    width: 35px;
+    height: 35px;
 }
-.cart-irem p{
-    font-size: 16px;
+.cart-item p{
+    font-size: 18px;
+    margin: 0;
+    margin-left: 15px;
+}
+.cart-item a{
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    /* border-radius: 10px; */
 }

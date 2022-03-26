@@ -8,7 +8,6 @@ const Shop = () => {
   const [items, setItems] = useState([]);
   const [cart, setCart] = useState([]);
 
-  console.log();
   useEffect(() => {
     fetch("https://knrbokhari.github.io/fakeData1/products.JSON")
       .then((res) => res.json())
@@ -16,12 +15,34 @@ const Shop = () => {
   }, []);
 
   const addToCart = (item) => {
-    // console.log(id);
     if (cart.length < 4) {
-      const newCart = [...cart, item];
-      setCart(newCart);
+      if (cart.length === 0) {
+        const newCart = [...cart, item];
+        setCart(newCart);
+      } else {
+        const exists = cart.find((cartItem) => cartItem.id === item.id);
+        if (!exists) {
+          const newCart = [...cart, item];
+          setCart(newCart);
+        } else {
+          alert("you add this item");
+        }
+      }
     }
   };
+
+  const removeItemFromCart = (cartItem) => {
+    for (const item of cart) {
+      if (item.id === cartItem.id) {
+        const index = cart.indexOf(item);
+        let savedCart = [...cart];
+        savedCart.splice(index, 1);
+        setCart(savedCart);
+      }
+    }
+  };
+
+  // Math.round(Math.random()*4);
 
   return (
     <div className="shop-container">
@@ -33,9 +54,18 @@ const Shop = () => {
       <div className="cart-container">
         <div className="cart">
           <h1>Selected Items</h1>
-          {cart.map((cartItem) => (
-            <Cart cartItem={cartItem} key={cartItem.id}></Cart>
-          ))}
+          <div className="cart-items">
+            {cart.map((cartItem) => (
+              <Cart
+                cartItem={cartItem}
+                key={cartItem.id}
+                removeItemFromCart={removeItemFromCart}
+              ></Cart>
+            ))}
+          </div>
+          <button>CHOOSE 1 FOR ME</button>
+          <br></br>
+          <button>CLEAR</button>
         </div>
       </div>
     </div>
